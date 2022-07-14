@@ -2,7 +2,7 @@ function SideBar() {
     return (
         <div class="sidebar">
             <div class="usuario">
-                <img src="assets/img/catanacomics.svg" alt="" />
+                <img src="./assets/catanacomics.svg" alt="" />
                 <div class="texto">
                     <strong>catanacomics</strong>
                     Catana
@@ -14,11 +14,11 @@ function SideBar() {
                     Sugestões para você
                     <div>Ver tudo</div>
                 </div>
-                <Sugestao image ="assets/img/bad.vibes.memes.svg" name = "bad.vibes.memes" reason = "Segue você"/>
-                <Sugestao image ="assets/img/chibirdart.svg" name = "chibirdart" reason = "Segue você"/>
-                <Sugestao image ="assets/img/razoesparaacreditar.svg" name = "razoesparaacreditar" reason = "Novo no Instagram"/>
-                <Sugestao image ="assets/img/adorable_animals.svg" name = "adorable_animals" reason = "Segue você"/>
-                <Sugestao image ="assets/img/smallcutecats.svg" name = "smallcutecats" reason = "Segue você"/>
+                <Sugestao image ="./assets/bad.vibes.memes.svg" name = "bad.vibes.memes" reason = "Segue você"/>
+                <Sugestao image ="./assets/chibirdart.svg" name = "chibirdart" reason = "Segue você"/>
+                <Sugestao image ="./assets/razoesparaacreditar.svg" name = "razoesparaacreditar" reason = "Novo no Instagram"/>
+                <Sugestao image ="./assets/adorable_animals.svg" name = "adorable_animals" reason = "Segue você"/>
+                <Sugestao image ="./assets/smallcutecats.svg" name = "smallcutecats" reason = "Segue você"/>
             </div>
 
             <div class="links">
