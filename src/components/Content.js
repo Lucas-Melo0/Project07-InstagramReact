@@ -1,3 +1,4 @@
+
 function Content() {
     return (
         <div class="esquerda">
@@ -14,14 +15,12 @@ function Content() {
                     <ion-icon name="chevron-forward-circle"></ion-icon>
                 </div>
             </div>
-
             <div class="posts">
                 <Post userImage = "./assets/meowed.svg" 
                 userName = "meowed" 
                 postImage = "./assets/gato-telefone.svg" 
                 lastUserToLike = "respondeai" 
                 LikedNumbers = "101.523" />
-
                 <Post userImage = "./assets/barked.svg" 
                 userName = "barked" 
                 postImage = "./assets/dog.svg" 
