@@ -1,4 +1,12 @@
 function SideBar() {
+    const data = [
+        {image: "./assets/bad.vibes.memes.svg", name: "bad.vibes.memes", reason: "Segue você"},
+        {image: "./assets/chibirdart.svg", name: "chibirdart", reason: "Segue você"},
+        {image: "./assets/razoesparaacreditar.svg", name: "razoesparaacreditar", reason: "Novo no Instagram"},
+        {image: "./assets/adorable_animals.svg", name: "adorable_animals", reason: "Segue você"},
+        {image: "./assets/smallcutecats.svg", name: "smallcutecats", reason: "Segue você"}
+]
+       
     return (
         <div class="sidebar">
             <div class="usuario">
@@ -14,11 +22,7 @@ function SideBar() {
                     Sugestões para você
                     <div>Ver tudo</div>
                 </div>
-                <Sugestao image ="./assets/bad.vibes.memes.svg" name = "bad.vibes.memes" reason = "Segue você"/>
-                <Sugestao image ="./assets/chibirdart.svg" name = "chibirdart" reason = "Segue você"/>
-                <Sugestao image ="./assets/razoesparaacreditar.svg" name = "razoesparaacreditar" reason = "Novo no Instagram"/>
-                <Sugestao image ="./assets/adorable_animals.svg" name = "adorable_animals" reason = "Segue você"/>
-                <Sugestao image ="./assets/smallcutecats.svg" name = "smallcutecats" reason = "Segue você"/>
+                {data.map(value => <Sugestao image = {value.image} name = {value.name} reason = {value.reason}/>)}
             </div>
 
             <div class="links">
@@ -31,6 +35,7 @@ function SideBar() {
         </div>
     )
 }
+
 function Sugestao(props) {
     return (
         <div class="sugestao">
