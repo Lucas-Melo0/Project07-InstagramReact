@@ -310,8 +310,10 @@
     display: none !important;
   }
 
-  .acoes .liked {
+  .acoes ion-icon[name=heart].liked {
     fill:crimson;
+    animation: like-heart-animation 2s 
+  
   }
  
   
@@ -394,5 +396,28 @@
     .instagram-mobile {
       position: relative;
       top: 4px;
+    }
+  }
+  @keyframes like-heart-animation {
+    0%,
+    to {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+    15% {
+      opacity: 0.9;
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+    30% {
+      -webkit-transform: scale(0.95);
+      transform: scale(0.95);
+    }
+    45%,
+    80% {
+      opacity: 0.9;
+      -webkit-transform: scale(1);
+      transform: scale(1);
     }
   }

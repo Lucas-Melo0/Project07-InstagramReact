@@ -1,4 +1,5 @@
 import React from "react"
+
 function Posts() {
     const postData = [
         { userImage: "./assets/meowed.svg", userName: "meowed", postImage: "./assets/gato-telefone.svg", lastToLike: "respondeai", LikedNumbers: "101.523"},
@@ -20,10 +21,9 @@ function Post(props) {
     const [iconName, setIconName] = React.useState("heart-outline");
     const [likedAmount, setLikedAmount] = React.useState(props.LikedNumbers)
 
-    function likedState(){
+    function likedStateIcon(){
         let likedAmountNumber= Number(likedAmount.replaceAll('.', ''))
         
-
         if (iconName === "heart-outline"){
             likedAmountNumber = likedAmountNumber + 1
             likedAmountNumber = likedAmountNumber.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
@@ -39,6 +39,15 @@ function Post(props) {
         }
         
     }
+    function likedStateImage(){
+        let likedAmountNumber= Number(likedAmount.replaceAll('.', ''))
+        if (iconName === "heart-outline"){
+            likedAmountNumber = likedAmountNumber + 1
+            likedAmountNumber = likedAmountNumber.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+            setIconName("heart")
+            setLikedAmount(likedAmountNumber)
+        }
+    }
     
     return (
         <div class="post">
@@ -53,13 +62,13 @@ function Post(props) {
             </div>
 
             <div class="conteudo">
-                <img src={props.postImage} alt="" />
+                <img onClick = {likedStateImage}src={props.postImage} alt="" />
             </div>
 
             <div class="fundo">
                 <div class="acoes">
                     <div>
-                        <ion-icon onClick ={likedState} class= "liked" name={iconName}></ion-icon>
+                        <ion-icon onClick ={likedStateIcon} class= "liked" name={iconName}></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
