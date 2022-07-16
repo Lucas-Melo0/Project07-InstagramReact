@@ -1,28 +1,21 @@
 function SideBar() {
     const data = [
-        {image: "./assets/bad.vibes.memes.svg", name: "bad.vibes.memes", reason: "Segue você"},
-        {image: "./assets/chibirdart.svg", name: "chibirdart", reason: "Segue você"},
-        {image: "./assets/razoesparaacreditar.svg", name: "razoesparaacreditar", reason: "Novo no Instagram"},
-        {image: "./assets/adorable_animals.svg", name: "adorable_animals", reason: "Segue você"},
-        {image: "./assets/smallcutecats.svg", name: "smallcutecats", reason: "Segue você"}
-]
-       
+        { image: "./assets/bad.vibes.memes.svg", name: "bad.vibes.memes", reason: "Segue você" },
+        { image: "./assets/chibirdart.svg", name: "chibirdart", reason: "Segue você" },
+        { image: "./assets/razoesparaacreditar.svg", name: "razoesparaacreditar", reason: "Novo no Instagram" },
+        { image: "./assets/adorable_animals.svg", name: "adorable_animals", reason: "Segue você" },
+        { image: "./assets/smallcutecats.svg", name: "smallcutecats", reason: "Segue você" }
+    ]
+
     return (
         <div class="sidebar">
-            <div class="usuario">
-                <img src="./assets/catanacomics.svg" alt="" />
-                <div class="texto">
-                    <strong>catanacomics</strong>
-                    Catana
-                </div>
-            </div>
-
+            <Usuario userImage = "./assets/catanacomics.svg" userId = "catanacomics" userName = "Catana"/>
             <div class="sugestoes">
                 <div class="titulo">
                     Sugestões para você
                     <div>Ver tudo</div>
                 </div>
-                {data.map(value => <Sugestao image = {value.image} name = {value.name} reason = {value.reason}/>)}
+                {data.map(value => <Sugestao image={value.image} name={value.name} reason={value.reason} />)}
             </div>
 
             <div class="links">
@@ -31,6 +24,18 @@ function SideBar() {
 
             <div class="copyright">
                 © 2021 INSTAGRAM DO FACEBOOK
+            </div>
+        </div>
+    )
+}
+
+function Usuario(props) {
+    return (
+        <div class="usuario">
+            <img src={props.userImage} alt="" />
+            <div class="texto">
+                <strong>{props.userId}</strong>
+                {props.userName}
             </div>
         </div>
     )
